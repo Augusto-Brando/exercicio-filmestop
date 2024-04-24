@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import './App.css'
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
+
+import "./App.css";
+import SearchInput from "./components/SearchInput";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h2>Filmes top</h2>
-    </>
-  )
+    <div className="app-container">
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;

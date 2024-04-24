@@ -1,0 +1,13 @@
+.footer {
+    background-color: #242121;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer h2 {
+    color: #f7d354;
+    font-size: 15px;
+    justify-content: center;
+    margin-top: 19px;
+}
