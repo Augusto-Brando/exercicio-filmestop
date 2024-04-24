@@ -1,0 +1,21 @@
+.MovieGenreFilterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.MovieGenreFilterContainer select {
+  margin-bottom: 20px;
+}
+
+.MovieGenreFilterContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.MovieGenreFilterContainer li {
+  margin-bottom: 10px;
+}

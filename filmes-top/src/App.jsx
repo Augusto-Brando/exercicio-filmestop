@@ -3,12 +3,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 
 import "./App.css";
+import MovieList from "./components/SearchInput";
 import SearchInput from "./components/SearchInput";
 
 function App() {
   return (
     <div className="app-container">
       <Navbar />
+      <SearchInput />
       <Outlet />
       <Footer />
     </div>
