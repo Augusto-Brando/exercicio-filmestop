@@ -13,7 +13,6 @@ const SearchInput = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // Função para obter os gêneros disponíveis
     const fetchGenres = async () => {
       try {
         const response = await axios.get(
@@ -35,13 +34,11 @@ const SearchInput = () => {
   }, []);
 
   useEffect(() => {
-    // Verificar se há um filtro na URL
     const genreParam = searchParams.get('genre');
     if (genreParam) {
       setSelectedGenre(genreParam);
       fetchMovies(genreParam);
     } else {
-      // Se não houver filtro, limpar os filmes filtrados
       setFilteredMovies([]);
       setSelectedGenre('');
     }
@@ -71,15 +68,14 @@ const SearchInput = () => {
     fetchMovies(genreId);
   };
 
-  // Verifica se estamos na página de detalhes do filme
   const isMovieDetailPage = location.pathname.includes('/movie/');
 
   return (
-    // Renderiza o componente apenas se não estivermos na página de detalhes do filme
     !isMovieDetailPage && (
       <div className="MovieGenreFilterContainer">
         <h2>Escolha um gênero:</h2>
-        <select value={selectedGenre} onChange={(e) => handleGenreChange(e.target.value)}>
+
+        <select className='inputSearch' value={selectedGenre} onChange={(e) => handleGenreChange(e.target.value)}>
           <option value="">Todos</option>
           {genres.map((genre) => (
             <option key={genre.id} value={genre.id}>
@@ -87,8 +83,6 @@ const SearchInput = () => {
             </option>
           ))}
         </select>
-
-        <h3>Resultados:</h3>
         <div className="movies-container">
           {filteredMovies.map((movie) => (
             <MovieCard key={movie.id} movie={movie} />

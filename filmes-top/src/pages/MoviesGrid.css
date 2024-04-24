@@ -1,12 +1,12 @@
 .container .title {
-    color: #eee3e3;
-    font-size: 2.2rem;
-    text-align: center;
-    margin: 2rem 0 1rem;
-  }
+  color: #eee3e3;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
 
-.underline-title { 
-  background-color: #f7d354 ;
+.underline-title {
+  background-color: #f7d354;
   height: 2px;
   max-width: 200px;
   margin: auto;
@@ -24,7 +24,7 @@
   justify-content: space-between;
   padding: 1rem;
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .movies-container div {
